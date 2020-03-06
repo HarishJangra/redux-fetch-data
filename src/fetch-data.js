@@ -1,9 +1,10 @@
-import React, { Component, PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { RouterContext } from 'react-router';
-import { doneFetching } from './module';
-import { grabPromises } from './utils';
+import React, { Component } from "react";
+import { PropTypes } from "props-types";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { RouterContext } from "react-router";
+import { doneFetching } from "./module";
+import { grabPromises } from "./utils";
 
 export class FetchData extends Component {
   componentWillMount() {
@@ -29,7 +30,7 @@ export class FetchData extends Component {
   }
 
   render() {
-    return <RouterContext {...this.props}/>;
+    return <RouterContext {...this.props} />;
   }
 }
 

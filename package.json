@@ -1,6 +1,6 @@
 {
-  "name": "redux-fetch-data",
-  "version": "0.1.4",
+  "name": "@harishjangra/redux-fetch-data",
+  "version": "0.1.5",
   "description": "Redux utility library for fetching data using promises on both server and client.",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
@@ -15,8 +15,7 @@
   "scripts": {
     "compile": "babel --loose es6.modules -d lib/ src/",
     "lint": "eslint src test",
-    "prepublish": "npm run lint && npm run compile",
-    "precommit": "npm-run-all lint test",
+    "prepublish": "npm run compile",
     "test": "NODE_ENV=test mocha --compilers js:babel-core/register --require test/index.js --recursive",
     "test:cover": "istanbul cover _mocha -- --compilers js:babel-core/register --require test/index.js --recursive",
     "test:watch": "npm test -- --watch --reporter min"
@@ -33,12 +32,9 @@
     "data",
     "react-component"
   ],
-  "author": "Christoffer Niska <christofferniska@gmail.com>",
+  "author": "Harish Jangra <harish0212@yahoo.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nordsoftware/redux-fetch-data/issues"
-  },
-  "homepage": "https://github.com/nordsoftware/redux-fetch-data#readme",
+  "homepage": "https://github.com/harishjangra/redux-fetch-data#readme",
   "babel": {
     "presets": [
       "stage-2",
@@ -47,7 +43,7 @@
     ]
   },
   "peerDependencies": {
-    "react": "^15.0.2",
+    "react": "^16.8.6",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
     "redux": "^3.5.2"
@@ -74,7 +70,7 @@
     "mocha": "^2.4.5",
     "react": "^15.0.2",
     "react-addons-test-utils": "^15.0.2",
-    "react-dom": "^15.0.2",
+    "react-dom": "^16.8.6",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
     "redux": "^3.5.2",
@@ -83,6 +79,7 @@
   },
   "dependencies": {
     "npm-run-all": "^4.0.1",
+    "prop-types": "^15.7.2",
     "redux-actions": "^0.9.1"
   }
 }

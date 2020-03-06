@@ -1,6 +1,6 @@
 /* eslint no-unused-vars: 0 */
 
-import { doneFetching } from './module';
+import { doneFetching } from "./module";
 
 /**
  *
@@ -25,7 +25,7 @@ export function flattenComponents(components) {
   for (let i = 0; i < components.length; i++) {
     // handle named components
     // https://github.com/reactjs/react-router/blob/latest/docs/API.md#named-components
-    if (typeof components[i] === 'object') {
+    if (typeof components[i] === "object") {
       for (let [key, value] of Object.entries(components[i])) {
         flattened.push(value);
       }
@@ -44,8 +44,7 @@ export function flattenComponents(components) {
  * @returns {Promise}
  */
 export function fetchDataOnServer({ components, params }, store) {
-  return Promise.all(grabPromises(components, params, store))
-    .then(() => {
-      store.dispatch(doneFetching());
-    });
+  return Promise.all(grabPromises(components, params, store)).then(() => {
+    store.dispatch(doneFetching());
+  });
 }
